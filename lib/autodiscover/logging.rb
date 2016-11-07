@@ -1,11 +1,9 @@
 module Autodiscover
-  Logging.logger["Autodiscover"].level = :info
-
   def self.logger
-    Logging.logger["Autodiscover"]
+    Rails.logger
   end
 
   def logger
-    @logger ||= ::Logging.logger[self.class.name]
+    @logger ||=  Rails.logger
   end
 end
