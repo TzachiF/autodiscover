@@ -5,14 +5,14 @@ require "httpclient"
 require "logging"
 
 module Autodiscover
-  Logging.logger["Autodiscover"].level = :info
+  ::Logging.logger["Autodiscover"].level = :info
 
   def self.logger
-    Logging.logger["Autodiscover"]
+    ::Logging.logger["Autodiscover"]
   end
 
   def logger
-    @logger ||= Logging.logger[self.class.name]
+    @logger ||= ::Logging.logger[self.class.name]
   end
 end
 
